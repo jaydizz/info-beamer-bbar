@@ -1,0 +1,36 @@
+[{
+    "module": "videos",
+    "options": {
+        "videos": [
+            {
+                "file": "3d-druck.mp4",
+                "duration": 9.0,
+                "raw": false,
+                "text": "3D-Druck gefaellig? Wir haben's!"
+            }
+        ]
+    },
+    "chance": 0.15
+}, {
+    "module": "events",
+    "options": {
+        "duration": 14
+    }
+}, {
+    "module": "text",
+    "options": {
+        "text": "Simon ist ein ganz schoener Lulli!"
+    },
+    "chance": 0.2
+}, {
+    "module": "images",
+    "chance": 0.5
+}, {
+    "module": "twitter"
+}, {
+    "module": "logo",
+    "chance": 0.4
+}, {
+    "module": "ads",
+    "chance": 0.1
+}]

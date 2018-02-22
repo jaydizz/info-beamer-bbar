@@ -1,0 +1,24 @@
+= info-beamer-package fuer den Infobildschirm im VSH
+
+Basiert auf package-32c3-screens und sollte auf einem RPI2 laufen. 
+
+== Installation/Running
+
+Wir fahren das Package nicht auf info-beamer-hosted sondern mit info-beamer-pi auf einem standalone Pi2
+Hierfuer muessen die Umgebungsvariablen fuer die Skripte gesetzt werden (v.A. NODE).
+
+To add new images, just create new JPEG files prefixed with either {{{img_}}} or {{{ads_}}}. Adding videos requires you to
+edit the {{{playlist.json}}} file. New content for the ticker can be added by editing scroll.txt.
+
+== Notes
+
+ * During the conference I edited some of the {{{module_*}}} lua code and pushed updates to the PI. Code in {{{node.lua}}}
+ monitors all lua files prefixed with {{{module_}}} and reloads them every time they change.
+
+ * During the conference I had a development PI connected to the PI 7" screen to test my changes before pushing them to
+ "production". You can just setup multiple repositories on info-beamer hosted so you can just do
+ {{{git push info-beamer-test master}}}.
+
+ * This code doesn't use any child nodes for performance reasons. It's only using a single top level node. To make it more
+ modular I wrote a small module that makes it easier to split code into logical parts. Have a look at {{{node.lua}}} for
+ that.
